@@ -1,0 +1,21 @@
+<span><input type="checkbox" [(ngModel)]="suvcheck">SUV</span><br>
+<span><input type="checkbox" [(ngModel)]="sedancheck">Sedan</span><br>
+<span><input type="checkbox" [(ngModel)]="kompaktcheck">Kompakt</span><br>
+<span><input type="checkbox" [(ngModel)]="sportcheck">Sport</span><br>
+<span><input type="checkbox" [(ngModel)]="dostawcheck">Dostawczy</span><br>
+
+<h2>Wszystkie auta</h2>
+@for(car of cars; track 0){
+    @if(suvcheck && car.category == 'SUV' 
+    || sedancheck && car.category == 'Sedan'
+    || kompaktcheck && car.category == 'Kompakt'
+    || sportcheck && car.category == 'Sport'
+    || dostawcheck && car.category == 'Dostawczy'){
+        <div [class.blok] = "car.isAvailable" [class.blok2] = "!car.isAvailable">
+            <h3>Marka: {{car.brand}}</h3>
+            <p>Model: {{car.model}}</p>
+            <p>Cena: {{car.price}} tys.</p>
+            <p>Kategoria: {{car.category}}</p>
+        </div> 
+    }
+}

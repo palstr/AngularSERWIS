@@ -1,0 +1,22 @@
+<h2>Wybierz rodzaj</h2>
+
+<select [(ngModel)] = "rodzaj">
+    @for(category of categories; track 0){
+        <option>{{category}}</option>
+    }
+</select>
+
+<h3>Wybrany rodzaj: {{rodzaj}}</h3>
+
+<h2>Wszystkie auta</h2>
+@for(car of cars; track 0){
+    @if(car.category == rodzaj){
+        <div [class.blok] = "car.isAvailable" [class.blok2] = "!car.isAvailable">
+            <h3>Marka: {{car.brand}}</h3>
+            <p>Model: {{car.model}}</p>
+            <p>Cena: {{car.price}} tys.</p>
+            <p>Kategoria: {{car.category}}</p>
+        </div> 
+    }
+}
+<br><br>

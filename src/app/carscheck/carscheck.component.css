@@ -1,0 +1,15 @@
+.blok{
+    width: 200px;
+    float: left;
+    background-color: aqua;
+    margin: 5px;
+    padding: 3px;
+}
+.blok2{
+    width: 200px;
+    float: left;
+    background-color:rgb(72, 72, 72);
+    color: white;
+    margin: 5px;
+    padding: 3px;
+}
