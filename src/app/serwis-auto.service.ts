@@ -13,6 +13,14 @@ export class SerwisAutoService {
     return this.cars;
   }
 
+  /*
+  Wersja: 1.0.0
+
+  Tworzy serwis dla aplikacji webowej o tematyce samochodowej.
+  W głównej aplikacji można filtrować wyświetlane samochody według kategorii zawartych
+  we właściwościach zdefiniowanych tutaj.
+  */
+
   private cars:Auto[] = [
 
   { brand: 'Toyota', model: 'RAV4', price: 160, isAvailable: true, category: Category.SUV },
